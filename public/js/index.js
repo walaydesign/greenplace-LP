@@ -7,7 +7,7 @@ $(".header_item").click(function(){
     $("html, body").animate({ scrollTop: top }, parseInt(300));
 })
 
-$(".btn-top").click(function(){
+$(".sideBtn_top").click(function(){
     $("html, body").animate({scrollTop: 0},300);
 })
 
@@ -45,4 +45,13 @@ var swiperChillText = new Swiper(".chill_textSwiper", {
     },
     speed: 800,
     allowTouchMove: false,
+})
+
+$(".beauty_mode button").click(function() {
+    $(this).addClass("active").siblings("button").removeClass("active");
+    if($(this).hasClass("beauty_mode-light")) {
+        $(".beauty").removeClass("dark").addClass("light");
+    }else if($(this).hasClass("beauty_mode-dark")) {
+        $(".beauty").removeClass("light").addClass("dark");
+    }
 })
