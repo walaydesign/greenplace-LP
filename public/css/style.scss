@@ -2,7 +2,6 @@
 
 $primary-500: #0069A9;
 $secondary-500: #FFF100;
-$third-500: #e45d5c;
 $transition-common: 0.3s;
 $font-serif: 'Noto Serif TC', sans-serif;
 $shadow: 1px 1px 3px rgba(0,56,84,0.4);
@@ -15,7 +14,7 @@ body {
     background-position: 0 0;
     letter-spacing: 0.05em;
     @media screen and (max-width: 1199px) {
-        padding-bottom: 60px;
+        padding-bottom: 55px;
     }
 }
 
@@ -224,6 +223,118 @@ main {
             right: 10.5vw;
         }
     }
+    &_phone {
+        text-align: center;
+        color: #fff;
+        text-shadow: $shadow;
+        font-size: 40px;
+        font-weight: 700;
+    }
+    @media screen and (max-width: 991px) {
+        padding-top: 30vw;
+        padding-bottom: 45.56vw;
+        background-image: url(../img/kv-bg-m.webp);
+        &_logo {
+            margin-bottom: 15.28vw;
+            max-width: 280px;
+        }
+        &_title {
+            display: block;
+            &_core {
+                margin-left: 0;
+                margin-top: 13px;
+            }
+        }
+        &_info {
+            display: block;
+            padding: 0 15px;
+            position: relative;
+            li {
+                padding: 0;
+                &::after {
+                    display: none;
+                }
+            }
+            &_free {
+                font-size: 40px;
+                text-align: center;
+            }
+            &::before, &::after {
+                position: absolute;
+                content: "";
+                width: 2px;
+                height: calc(100% - 20px);
+                background-color: #fff;
+                box-shadow: 1px 1px 3px rgba(0,56,84,0.41);
+                top: 50%;
+                transform: translateY(-45%);
+            }
+            &::before {
+                left: 0;
+            }
+            &::after {
+                right: 0;
+            }
+        }
+    }
+    @media screen and (max-width: 575px) {
+        &_logo {
+            max-width: 200px;
+        }
+        &_title {
+            &_text {
+                font-size: 39px;
+            }
+            &_x {
+                font-size: 30px;
+            }
+            &_core {
+                font-size: 31px;
+            }
+        }
+        &_info {
+            padding: 0 10px;
+            &_free {
+                font-size: 29px;
+            }
+            &_size {
+                &_num {
+                    font-size: 28px;
+                }
+                &_unit {
+                    font-size: 14px;
+                    width: 20px;
+                    height: 20px;
+                    margin: 0 5px;
+                }
+                &_text {
+                    font-size: 25px;
+                }
+            }
+        }
+        &_phone {
+            font-size: 30px;
+        }
+        &_mountain {
+            &-1 {
+                width: 82.5vw;
+                bottom: -2.5vw;
+                left: -26.39vw;
+            }
+        }
+        &_bird {
+            &-1 {
+                width: 22.61vw;
+                top: 49.72vw;
+                left: -5.56vw;
+            }
+            &-2 {
+                width: 41.01vw;
+                top: 11.67vw;
+                right: -12.22vw;
+            }
+        }
+    }
 }
 
 .highlight {
@@ -263,6 +374,14 @@ main {
             }
         }
     }
+    @media screen and (max-width: 991px) {
+        &-en {
+            font-size: 21px;
+        }
+        &-ch {
+            font-size: 22px;
+        }
+    }
 }
 
 .text {
@@ -271,6 +390,9 @@ main {
     letter-spacing: 0.1em;
     &-white {
         color: #fff;
+    }
+    @media screen and (max-width: 991px) {
+        font-size: 12px;
     }
 }
 
@@ -283,6 +405,7 @@ main {
         margin: 0 auto;
         text-align: center;
         z-index: 1;
+        transform: translateY(7vw);
     }
     &_symbol {
         width: 30px;
@@ -315,6 +438,62 @@ main {
         top: 11.8vw;
         left: 15.32vw;
     }
+    .source {
+        right: 20px;
+        bottom: 3.21vw;
+    }
+    &_main {
+        width: 100%;
+    }
+    &_hint {
+        position: absolute;
+        width: 65%;
+        bottom: 57.78vw;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    @media screen and (max-width: 991px) {
+        padding-top: 35vw;
+        &_text {
+            position: absolute;
+            width: 100%;
+            top: 10vw;
+            left: 0;
+        }
+        &_inner {
+            overflow-x: auto;
+        }
+        &_main {
+            width: 1000px;
+        }
+        .title-en {
+            margin-bottom: 20px;
+        }
+        .title-ch {
+            &::before, &::after {
+                width: 4px;
+                height: 16px;
+            }
+        }
+        &_symbol {
+            width: 16px;
+        }
+        .source {
+            right: 10px;
+            bottom: 10px;
+        }
+    }
+}
+
+.source {
+    position: absolute;
+    font-size: 18px;
+    color: #fff;
+    margin: 0;
+    text-shadow: 0 0 2px #003854;
+    @media screen and (max-width: 991px) {
+        font-size: 8px;
+    }
 }
 
 .tech {
@@ -333,10 +512,14 @@ main {
             &-en {
                 position: absolute;
                 top: 0;
-                left: 12.04vw;
+                // left: 12.04vw;
+                left: 0;
                 transform: translateY(-50%);
                 margin: 0;
                 color: rgba(255,255,255,0.57);
+                span {
+                    display: block;
+                }
             }
             &-ch {
                 padding-left: 12.04vw;
@@ -360,12 +543,7 @@ main {
             padding-left: 12.04vw;
         }
     }
-    &_picIntro {
-        font-size: 18px;
-        margin: 0;
-        color: #fff;
-        position: absolute;
-        text-shadow: 0 0 3px rgba(0,0,0,0.75);
+    .source {
         bottom: 8.04vw;
         right: 20px;
     }
@@ -373,6 +551,39 @@ main {
         width: 24.77vw;
         bottom: -7.88vw;
         left: 10px;
+    }
+    @media screen and (max-width: 991px) {
+        &_text {
+            top: 33.89vw;
+            padding-top: 20px;
+            padding-right: 30px;
+            padding-bottom: 20px;
+            border-radius: 0 30px 30px 0;
+            width: 76%;
+            .title {
+                padding-left: 14.44vw;
+                &-ch {
+                    border-width: 1px;
+                    &::after {
+                        width: 5px;
+                        height: 5px;
+                    }
+                }
+            }
+            .text {
+                padding-left: 14.44vw;
+                margin: 0;
+            }
+        }
+        .source {
+            right: 10px;
+            bottom: 20.28vw;
+        }
+        &_bird {
+            width: 50.92vw;
+            bottom: 8.33vw;
+            left: -7.22vw;
+        }
     }
 }
 
@@ -462,6 +673,8 @@ main {
         }
     }
     &_pagination {
+        display: flex;
+        align-items: center;
         .swiper-pagination-bullet {
             width: 17px;
             height: 17px;
@@ -492,6 +705,70 @@ main {
             }
         }
     }
+    @media screen and (max-width: 991px) {
+        padding-left: 40px;
+        padding-right: 40px;
+        >.container {
+            flex-direction: column;
+            padding-left: 0;
+            padding-right: 0;
+        }
+        &_pic {
+            order: 2 !important;
+            width: 100%;
+        }
+        &_text {
+            order: 1 !important;
+            width: 100%;
+            padding-right: 35px !important;
+            padding-left: 35px !important;
+            padding-bottom: 50px;
+            .title-ch {
+                font-size: 22px;
+                margin-bottom: 10px;
+            }
+        }
+        &_line {
+            margin-top: 0;
+            margin-bottom: 20px;
+            height: 1px;
+            &::before, &::after {
+                width: 5px;
+                height: 5px;
+            }
+            &::before {
+                left: -5px;
+            }
+            &::after {
+                right: -5px;
+            }
+        }
+        &_pagination {
+            position: static !important;
+            margin: 32px auto 0;
+            width: fit-content;
+            .swiper-pagination-bullet {
+                width: 10px;
+                height: 10px;
+                border-width: 1px;
+                &::after {
+                    height: 1px;
+                    left: calc(100% + 1px);
+                }
+            }
+        }
+        &_item {
+            >p {
+                font-size: 8px;
+                top: 5px;
+                right: 5px;
+            }
+        }
+        &_arrow {
+            width: 25px;
+            height: 25px;
+        }
+    }
 }
 
 .transport {
@@ -501,11 +778,11 @@ main {
         &_text {
             padding-top: 65px;
             position: relative;
-            .slider_pagination {
-                position: absolute;
-                bottom: 0;
-                right: 60px;
-            }
+        }
+        &_pagination {
+            position: absolute;
+            bottom: 0;
+            right: calc(100% + 60px);
         }
     }
     &_tree {
@@ -518,6 +795,26 @@ main {
             width: 10.25vw;
             bottom: 3.72vw;
             right: -2.3vw;
+        }
+    }
+    @media screen and (max-width: 991px) {
+        padding-bottom: 49.44vw;
+        .slider {
+            &_text {
+                padding-top: 0;
+                position: static;
+            }
+            &_pagination {
+                position: static;
+                margin-top: 32px;
+            }
+        }
+        &_tree {
+            &-1 {
+                width: 13.27vw;
+                bottom: 8.89vw;
+                left: 10.83vw;
+            }
         }
     }
 }
@@ -593,13 +890,67 @@ main {
         margin: 0;
         text-align: justify;
     }
+    @media screen and (max-width: 1700px) {
+        &_title {
+            h4 {
+                font-size: 36px;
+            }
+            ul {
+                li {
+                    font-size: 24px;
+                }
+            }
+        }
+        &_text {
+            font-size: 16px;
+        }
+    }
+    @media screen and (max-width: 1199px) {
+        &_title {
+            display: block;
+            ul {
+                margin-top: 15px;
+                margin-left: 0;
+            }
+        }
+        &_text {
+            font-size: 16px;
+        }
+    }
+    @media screen and (max-width: 991px) {
+        &_title {
+            display: flex;
+            margin-bottom: 10px;
+            h4 {
+                font-size: 19px;
+            }
+            ul {
+                padding: 2px 12px;
+                margin: 0 0 0 8px;
+                li {
+                    font-size: 14px;
+                }
+                &::before {
+                    width: 2px;
+                    height: 2px;
+                    left: 7px;
+                }
+            }
+        }
+        &_line {
+            width: 15px;
+        }
+        &_text {
+            font-size: 12px;
+        }
+    }
 }
 
 .beauty {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 8.69vw 0;
+    padding: 11vw 0 7vw;
     position: relative;
     &.light {
         background-image: url(../img/beauty-light.webp);
@@ -668,11 +1019,50 @@ main {
         left: 24.94vw;
         bottom: 6.86vw;
     }
+    .source {
+        right: 20px;
+        bottom: 20px;
+    }
+    &_tree {
+        width: 17.4vw;
+        top: -10vw;
+        right: -1.94vw;
+    }
+    @media screen and (max-width: 991px) {
+        padding: 21.67vw 0 59.44vw;
+        &.light {
+            background-image: url(../img/beauty-light-m.webp);
+        }
+        &.dark {
+            background-image: url(../img/beauty-dark-m.webp);
+        }
+        >.container {
+            max-width: 250px;
+        }
+        &_mode {
+            button {
+                padding: 6px 20px;
+                font-size: 10px;
+                border-radius: 10px;
+                margin-bottom: 5px;
+            }
+        }
+    }
 }
 
 .contact {
-    height: 58.88vw;
+    // height: 58.88vw;
+    height: 1140px;
+    padding: 100px 0;
     position: relative;
+    &_form {
+        max-width: 650px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    iframe {
+        display: block;
+    }
     &_tree {
         &-1 {
             width: 5.84vw;
@@ -711,6 +1101,7 @@ main {
     &_top {
         padding-top: 40px;
         background-color: #fff;
+        position: relative;
         h2 {
             font-size: 38px;
             font-weight: 900;
@@ -790,6 +1181,16 @@ main {
             }
         }
     }
+    &_bird {
+        width: 36.21vw;
+        top: 35px;
+        right: -5.28vw;
+    }
+    &_tree {
+        width: 10.2vw;
+        top: 10px;
+        left: 3.89vw;
+    }
     @media screen and (max-width: 767px) {
         padding-bottom: 0;
         &_top {
@@ -817,15 +1218,17 @@ main {
                         &.footer_inform {
                             &_title {
                                 font-size: 13px;
-                                width: 90px;
-                                padding-right: 10px;
+                                width: 70px;
+                                padding-right: 0;
+                                padding-left: 10px;
+                                margin-right: 15px;
                                 &::before {
-                                    width: 2px;
-                                    height: 15px;
+                                    width: 4px;
+                                    height: 4px;
                                 }
                             }
                             &_content {
-                                width: calc(100% - 90px);
+                                width: calc(100% - 70px);
                                 margin-top: 1px;
                                 // color: #70627f;
                                 font-size: 12px;
@@ -837,7 +1240,7 @@ main {
         }
         &_bottom {
             padding: 5px 10px;
-            background-color: $secondary-500;
+            background-color: #8AB841;
             position: static;
             p {
                 font-size: 12px;
@@ -953,10 +1356,11 @@ main {
         }
         &_top {
             width: 25%;
+            height: 55px;
             >li {
                 width: 100%;
                 a {
-                    height: 60px;
+                    height: 55px;
                 }
             }
         }
@@ -972,10 +1376,10 @@ main {
         }
         a {
             width: 100%;
-            height: 60px;
+            height: 55px;
             border-radius: 0 !important;
             img {
-                width: 25px;
+                width: 35px;
                 margin-bottom: 1px;
             }
             span {
