@@ -975,7 +975,7 @@ main {
         width: 100%;
     }
     .intro {
-        margin: 35px 0;
+        padding: 35px 0;
         &_title {
             h4 {
                 color: $primary-500;
@@ -989,6 +989,9 @@ main {
         }
         &_text {
             color: $primary-500;
+        }
+        &.dark {
+            // display: none;
         }
     }
     &_mode {
@@ -1027,6 +1030,24 @@ main {
         width: 17.4vw;
         top: -10vw;
         right: -1.94vw;
+    }
+    &_intro {
+        position: relative;
+        .intro {
+            opacity: 0;
+            visibility: hidden;
+            transition: $transition-common;
+            &.light {
+                position: absolute;
+                width: 100%;
+                top: 0;
+                left: 0;
+            }
+            &.active {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
     }
     @media screen and (max-width: 991px) {
         padding: 21.67vw 0 59.44vw;

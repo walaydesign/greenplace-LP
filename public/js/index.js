@@ -51,8 +51,12 @@ $(".beauty_mode button").click(function() {
     $(this).addClass("active").siblings("button").removeClass("active");
     if($(this).hasClass("beauty_mode-light")) {
         $(".beauty").removeClass("dark").addClass("light");
+        $(".beauty").find(".intro.light").addClass("active");
+        $(".beauty").find(".intro.dark").removeClass("active");
     }else if($(this).hasClass("beauty_mode-dark")) {
         $(".beauty").removeClass("light").addClass("dark");
+        $(".beauty").find(".intro.dark").addClass("active");
+        $(".beauty").find(".intro.light").removeClass("active");
     }
 })
 

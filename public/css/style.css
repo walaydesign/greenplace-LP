@@ -1116,7 +1116,7 @@ main {
 }
 
 .beauty .intro {
-  margin: 35px 0;
+  padding: 35px 0;
 }
 
 .beauty .intro_title h4 {
@@ -1176,6 +1176,29 @@ main {
   width: 17.4vw;
   top: -10vw;
   right: -1.94vw;
+}
+
+.beauty_intro {
+  position: relative;
+}
+
+.beauty_intro .intro {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.beauty_intro .intro.light {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.beauty_intro .intro.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 @media screen and (max-width: 991px) {
