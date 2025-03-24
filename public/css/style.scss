@@ -448,7 +448,7 @@ main {
     &_hint {
         position: absolute;
         width: 65%;
-        bottom: 57.78vw;
+        bottom: 45vw;
         left: 50%;
         transform: translateX(-50%);
     }
@@ -464,7 +464,7 @@ main {
             overflow-x: auto;
         }
         &_main {
-            width: 1000px;
+            width: 900px;
         }
         .title-en {
             margin-bottom: 20px;
@@ -704,6 +704,9 @@ main {
                 }
             }
         }
+    }
+    .text {
+        text-align: justify;
     }
     @media screen and (max-width: 991px) {
         padding-left: 40px;
@@ -989,9 +992,6 @@ main {
         }
         &_text {
             color: $primary-500;
-        }
-        &.dark {
-            // display: none;
         }
     }
     &_mode {

@@ -514,7 +514,7 @@ main {
 .map_hint {
   position: absolute;
   width: 65%;
-  bottom: 57.78vw;
+  bottom: 45vw;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -534,7 +534,7 @@ main {
     overflow-x: auto;
   }
   .map_main {
-    width: 1000px;
+    width: 900px;
   }
   .map .title-en {
     margin-bottom: 20px;
@@ -807,6 +807,10 @@ main {
 
 .slider_pagination .swiper-pagination-bullet:last-child::after {
   display: none;
+}
+
+.slider .text {
+  text-align: justify;
 }
 
 @media screen and (max-width: 991px) {
