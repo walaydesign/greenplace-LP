@@ -1205,6 +1205,18 @@ main {
   visibility: visible;
 }
 
+@media screen and (max-width: 1199px) {
+  .beauty .intro_title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .beauty .intro_title ul {
+    margin-left: 20px;
+    margin-top: 0;
+  }
+}
+
 @media screen and (max-width: 991px) {
   .beauty {
     padding: 21.67vw 0 59.44vw;
@@ -1223,6 +1235,10 @@ main {
     font-size: 10px;
     border-radius: 10px;
     margin-bottom: 5px;
+  }
+  .beauty .intro_title ul {
+    margin-left: 10px;
+    margin-top: 0;
   }
 }
 
