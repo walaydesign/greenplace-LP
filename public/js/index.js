@@ -73,3 +73,16 @@ function mapResize() {
         $(".map_inner").animate({scrollLeft: mapX});
     }
 }
+
+var swiperArrange = new Swiper(".arrange_swiper", {
+  slidesPerView: 1,
+  navigation: {
+    nextEl: "#arrange-next",
+    prevEl: "#arrange-prev",
+  },
+  speed: 800,
+  pagination: {
+    el: "#arrange-pagination",
+    clickable: true,
+  },
+});

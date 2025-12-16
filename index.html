@@ -1,379 +1,777 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>龍騰綠境</title>
     <meta property="og:image" content="./public/img/share.jpg" />
     <meta property="og:url" content="./public/img/share.jpg" />
     <meta property="og:image" content="./public/img/share.jpg" />
     <meta property="og:url" content="./public/img/share.jpg" />
-    <link rel="icon" type="image/x-icon" href="./favicon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./public/css/bootstrap/bootstrap.css">
-    <link rel="stylesheet" href="./public/css/aos/aos.css">
-    <link rel="stylesheet" href="./public/css/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./public/css/style.css?v=20250326">
-</head>
-<body>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./public/css/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="./public/css/aos/aos.css" />
+    <link rel="stylesheet" href="./public/css/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./public/css/style.css?v=20250326" />
+  </head>
+  <body>
     <header class="header d-sm-block d-none">
-        <nav class="header_nav">
-            <ul class="d-flex align-items-center justify-content-center">
-                <li class="header_item" data-target="#map">空拍圖</li>
-                <li class="header_item" data-target="#tech">地段位置</li>
-                <li class="header_item" data-target="#transport">生活機能</li>
-                <li class="header_item" data-target="#beauty">建築美學</li>
-                <li class="header_item" data-target="contact">預約表單</li>
-            </ul>
-        </nav>
+      <nav class="header_nav">
+        <ul class="d-flex align-items-center justify-content-center">
+          <li class="header_item" data-target="#map">空拍圖</li>
+          <li class="header_item" data-target="#tech">地段位置</li>
+          <li class="header_item" data-target="#transport">生活機能</li>
+          <li class="header_item" data-target="#beauty">建築美學</li>
+          <li class="header_item" data-target="contact">預約表單</li>
+        </ul>
+      </nav>
     </header>
 
     <main>
-        <div class="kv">
-            <img class="deco kv_mountain-1" src="./public/img/mountain-1.webp" alt="">
-            <img class="deco kv_mountain-2 d-lg-block d-none" src="./public/img/mountain-2.webp" alt="">
-            <img class="deco kv_bird-1" src="./public/img/bird-1.webp" alt="">
-            <img class="deco kv_bird-2" src="./public/img/bird-2.webp" alt="" data-aos="fade-down-left" data-aos-duration="800">
-            <img class="kv_logo" src="./public/img/logo.webp" alt="">
-            <h1 class="kv_title">
-                <div class="d-flex align-items-center justify-content-center">
-                    <span class="kv_title_text">過嶺</span>
-                    <span class="kv_title_x">X</span>
-                    <span class="kv_title_text">高榮</span>
+      <div class="kv">
+        <img
+          class="deco kv_mountain-1"
+          src="./public/img/mountain-1.webp"
+          alt=""
+        />
+        <img
+          class="deco kv_mountain-2 d-lg-block d-none"
+          src="./public/img/mountain-2.webp"
+          alt=""
+        />
+        <img class="deco kv_bird-1" src="./public/img/bird-1.webp" alt="" />
+        <img
+          class="deco kv_bird-2"
+          src="./public/img/bird-2.webp"
+          alt=""
+          data-aos="fade-down-left"
+          data-aos-duration="800"
+        />
+        <img class="kv_logo" src="./public/img/logo.webp" alt="" />
+        <h1 class="kv_title">
+          <div class="d-flex align-items-center justify-content-center">
+            <span class="kv_title_text">過嶺</span>
+            <span class="kv_title_x">X</span>
+            <span class="kv_title_text">高榮</span>
+          </div>
+          <div class="kv_title_core">
+            <span class="highlight">雙核</span><span>生活圈</span>
+          </div>
+        </h1>
+        <ul class="kv_info">
+          <li class="kv_info_free">千坪環景基地</li>
+          <li class="kv_info_size justify-content-center">
+            <span class="highlight kv_info_size_num">2-3</span>
+            <span class="kv_info_size_unit">房</span>
+            <span class="kv_info_size_text">雙衛浴</span>
+          </li>
+          <li class="kv_info_phone d-lg-block d-none">03-490-1133</li>
+        </ul>
+        <p class="kv_phone d-lg-none">03-490-1133</p>
+      </div>
+
+      <div class="map" id="map">
+        <img
+          class="deco map_bird d-lg-block d-none"
+          src="./public/img/bird-1.webp"
+          alt=""
+        />
+        <div class="map_inner">
+          <div class="map_text">
+            <h3
+              class="title title-en title-white"
+              data-aos="fade-up"
+              data-aos-duration="800"
+            >
+              UNLIMITED FUTURE
+            </h3>
+            <h2
+              class="title title-ch title-white"
+              data-aos="fade-up"
+              data-aos-duration="800"
+              data-aos-delay="100"
+            >
+              <span class="highlight">過嶺</span>10分鐘生活圈
+            </h2>
+            <p
+              class="text text-white"
+              data-aos="fade-up"
+              data-aos-duration="800"
+              data-aos-delay="200"
+            >
+              <span class="d-flex align-items-center justify-content-center">
+                <span>3分鐘上</span>
+                <img class="map_symbol" src="./public/img/66.webp" alt="" />
+                <span>快速道路，中壢好市多10分鐘，</span>
+              </span>
+              <span>科技菁英首選宜居之境，擁抱潛利無限新未來。</span>
+            </p>
+          </div>
+          <img class="map_main" src="./public/img/map.webp" alt="" />
+          <p class="source">空拍圖</p>
+          <img
+            class="map_hint d-md-none"
+            src="./public/img/scroll.webp"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <div class="tech" id="tech">
+        <img
+          class="tech_bg w-100 d-lg-block d-none"
+          src="./public/img/tech-bg.webp"
+          alt=""
+        />
+        <img
+          class="tech_bg w-100 d-lg-none"
+          src="./public/img/tech-bg-m.webp"
+          alt=""
+        />
+        <div class="tech_text">
+          <h3 class="title title-en title-white">
+            <span data-aos="fade-right" data-aos-duration="800"
+              >TECH CAPITAL</span
+            >
+          </h3>
+          <h2
+            class="title title-ch title-white"
+            data-aos="fade-right"
+            data-aos-duration="800"
+            data-aos-delay="100"
+          >
+            科技密境 <br class="d-lg-none" />西部產業走廊樞紐
+          </h2>
+          <p
+            class="text text-white"
+            data-aos="fade-right"
+            data-aos-duration="800"
+            data-aos-delay="200"
+          >
+            鄰近幼獅工業區、高榮工業區，串聯桃園與新竹產業聚落，<br
+              class="d-lg-block d-none"
+            />
+            快速連結國道，佔通勤往來之便，掌握未來發展先機。
+          </p>
+        </div>
+        <p class="source">情境示意圖</p>
+        <img
+          class="deco tech_bird"
+          src="./public/img/bird-3.webp"
+          alt=""
+          data-aos="fade-down-right"
+          data-aos-duration="800"
+        />
+      </div>
+
+      <div class="slider text-pic transport" id="transport">
+        <img
+          class="deco transport_tree-2 d-lg-block d-none"
+          src="./public/img/tree-1.webp"
+          alt=""
+        />
+        <div class="container d-flex">
+          <div class="slider_pic" data-aos="fade-up" data-aos-duration="800">
+            <div class="swiper-container transport_swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="slider_item">
+                    <img src="./public/img/transport-1.webp" alt="" />
+                    <p>66快速道路實景圖</p>
+                  </div>
                 </div>
-                <div class="kv_title_core">
-                    <span class="highlight">雙核</span><span>生活圈</span>
+                <div class="swiper-slide">
+                  <div class="slider_item">
+                    <img src="./public/img/transport-2.webp" alt="" />
+                    <p>桃園高鐵站實景圖</p>
+                  </div>
                 </div>
-            </h1>
-            <ul class="kv_info">
-                <!-- <li class="kv_info_free"><span class="highlight">2</span>年免管理費</li> -->
-                <li class="kv_info_free">千坪環景基地</li>
-                <!-- <li class="kv_info_size">
-                    <span class="highlight kv_info_size_num">23-33</span>
-                    <span class="kv_info_size_unit">坪</span>
-                    <span class="kv_info_size_text">E化宅</span>
-                </li> -->
-                <li class="kv_info_size justify-content-center">
-                    <span class="highlight kv_info_size_num">2-3</span>
-                    <span class="kv_info_size_unit">房</span>
-                    <span class="kv_info_size_text">雙衛浴</span>
+                <div class="swiper-slide">
+                  <div class="slider_item">
+                    <img src="./public/img/transport-3.webp" alt="" />
+                    <p>埔心火車站實景圖</p>
+                  </div>
+                </div>
+              </div>
+              <div class="slider_arrow swiper-button-next">
+                <img src="./public/img/arrow-right.webp" alt="" />
+              </div>
+              <div class="slider_arrow swiper-button-prev">
+                <img src="./public/img/arrow-left.webp" alt="" />
+              </div>
+            </div>
+            <div class="slider_pagination" id="transport-pagination"></div>
+          </div>
+          <div class="slider_text">
+            <h3
+              class="title title-en title-blue"
+              data-aos="fade-right"
+              data-aos-duration="800"
+            >
+              GOOD TRANSPORT
+            </h3>
+            <h2
+              class="title title-ch title-blue"
+              data-aos="fade-right"
+              data-aos-duration="800"
+              data-delay="100"
+            >
+              通勤捷境<br />交通路網四通八達
+            </h2>
+            <div class="slider_line"></div>
+            <p
+              class="text text-black"
+              data-aos="fade-right"
+              data-aos-duration="800"
+              data-delay="200"
+            >
+              3分鐘抵達66快速道路，瞬接國道1號滿足縱向、橫向路網需求，台鐵、高鐵雙軌加持，15分鐘抵青埔高鐵、30分鐘達桃園機場。
+            </p>
+            <img
+              class="deco transport_tree-1"
+              src="./public/img/tree-1.webp"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="slider pic-text chill">
+        <img
+          class="deco chill_tree d-lg-block d-none"
+          src="./public/img/tree-3.webp"
+          alt=""
+        />
+        <div class="container d-flex">
+          <div class="slider_pic" data-aos="fade-up" data-aos-duration="800">
+            <div class="swiper-container chill_swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="slider_item">
+                    <img src="./public/img/chill-4.webp" alt="" />
+                    <p>實景圖</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="slider_item">
+                    <img src="./public/img/chill-5.webp" alt="" />
+                    <p>實景圖</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="slider_item">
+                    <img src="./public/img/chill-6.webp" alt="" />
+                    <p>實景圖</p>
+                  </div>
+                </div>
+              </div>
+              <div class="slider_arrow swiper-button-next" id="chill-next">
+                <img src="./public/img/arrow-right.webp" alt="" />
+              </div>
+              <div class="slider_arrow swiper-button-prev" id="chill-prev">
+                <img src="./public/img/arrow-left.webp" alt="" />
+              </div>
+            </div>
+            <div class="slider_pagination" id="chill-pagination"></div>
+          </div>
+          <div class="slider_text">
+            <h3
+              class="title title-en title-blue"
+              data-aos="fade-left"
+              data-aos-duration="800"
+            >
+              CHILL LIFESTYLE
+            </h3>
+            <h2
+              class="title title-ch title-blue"
+              data-aos="fade-left"
+              data-aos-duration="800"
+              data-delay="100"
+            >
+              生活謐境<br />同時坐擁繁華與寧靜
+            </h2>
+            <div class="slider_line"></div>
+            <p
+              class="text text-black"
+              data-aos="fade-left"
+              data-aos-duration="800"
+              data-delay="200"
+            >
+              鄰近熱鬧的過嶺商圈，到COSTCO僅約10分鐘；享受工作效率與生活品質的完美平衡，滿足日常所有需求。
+            </p>
+            <div
+              class="swiper-container intro chill_textSwiper"
+              data-aos="fade-up"
+              data-aos-duration="800"
+              data-delay="300"
+            >
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="intro_title chill_textSwiper_title">
+                    <h4>商圈</h4>
+                    <ul>
+                      <li>食衣住行</li>
+                      <li class="intro_line chill_textSwiper_line">
+                        <img src="./public/img/chill-line.webp" alt="" />
+                      </li>
+                      <li>機能之境</li>
+                    </ul>
+                  </div>
+                  <p class="intro_text chill_textSwiper_text">
+                    坐享中壢過嶺民族路商圈＋楊梅市心的雙城機能，全聯、寶雅、億客城、各大超商、85度c、必勝客等連鎖品牌俱全，日常採買、食衣所需，均可一次滿足。
+                  </p>
+                </div>
+                <div class="swiper-slide">
+                  <div class="intro_title chill_textSwiper_title">
+                    <h4>商圈</h4>
+                    <ul>
+                      <li>食衣住行</li>
+                      <li class="intro_line chill_textSwiper_line">
+                        <img src="./public/img/chill-line.webp" alt="" />
+                      </li>
+                      <li>機能之境</li>
+                    </ul>
+                  </div>
+                  <p class="intro_text chill_textSwiper_text">
+                    坐享中壢過嶺民族路商圈＋楊梅市心的雙城機能，全聯、寶雅、億客城、各大超商、85度c、必勝客等連鎖品牌俱全，日常採買、食衣所需，均可一次滿足。
+                  </p>
+                </div>
+                <div class="swiper-slide">
+                  <div class="intro_title chill_textSwiper_title">
+                    <h4>校園</h4>
+                    <ul>
+                      <li>書香沁人</li>
+                      <li class="intro_line chill_textSwiper_line">
+                        <img src="./public/img/chill-line.webp" alt="" />
+                      </li>
+                      <li>勤學之境</li>
+                    </ul>
+                  </div>
+                  <p class="intro_text chill_textSwiper_text">
+                    距高榮國小僅800m，車行6分鐘可到仁美國中，是家有學齡兒父母的首選，鄰近校園方便日後接送上下學，環境相對單純安靜，更適合孩子學習成長。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="beauty light" id="beauty">
+        <img
+          class="deco beauty_mountain"
+          src="./public/img/mountain-3.webp"
+          alt=""
+        />
+        <img
+          class="deco beauty_bird d-lg-block d-none"
+          src="./public/img/bird-4.webp"
+          alt=""
+        />
+        <img
+          class="deco beauty_tree d-lg-none"
+          src="./public/img/beauty-tree.webp"
+          alt=""
+        />
+        <div class="container">
+          <div class="beauty_title">
+            <h3
+              class="title title-en title-white"
+              data-aos="fade-right"
+              data-aos-duration="800"
+            >
+              BUILDING BEAUTY
+            </h3>
+            <h2
+              class="title title-ch title-white"
+              data-aos="fade-right"
+              data-aos-duration="800"
+              data-aos-delay="100"
+            >
+              美學覓境<br />對稱建築簡約美學
+            </h2>
+            <div class="slider_line"></div>
+          </div>
+          <p
+            class="text text-white"
+            data-aos="fade-right"
+            data-aos-duration="800"
+            data-aos-delay="200"
+          >
+            建築如詩，我們擲筆只為在土地上，描繪人與自然的共鳴。簡潔的線條、對稱的結構，在光影交替間訴說這片土地的故事。
+          </p>
+          <div
+            class="beauty_intro"
+            data-aos="fade-right"
+            data-aos-duration="800"
+            data-aos-delay="300"
+          >
+            <div class="intro light active">
+              <div class="intro_title">
+                <h4>日景</h4>
+                <ul>
+                  <li>純粹之域</li>
+                  <li class="intro_line chill_textSwiper_line">
+                    <img src="./public/img/beauty-line.webp" alt="" />
+                  </li>
+                  <li>簡約之美</li>
+                </ul>
+              </div>
+              <p class="intro_text chill_textSwiper_text">
+                建築如同一幅純淨的畫卷，映照出清晨的第一縷日光。以白色線條勾畫出優雅的對稱結構，簡約與深度兼融，呈現純粹的有序之美。
+              </p>
+            </div>
+            <div class="intro dark">
+              <div class="intro_title">
+                <h4>夜景</h4>
+                <ul>
+                  <li>璀璨如星</li>
+                  <li class="intro_line chill_textSwiper_line">
+                    <img src="./public/img/beauty-line.webp" alt="" />
+                  </li>
+                  <li>閃耀城市</li>
+                </ul>
+              </div>
+              <p class="intro_text chill_textSwiper_text">
+                當夜幕降臨、華燈初上熠熠生輝，與深邃的夜空和閃爍的城市燈海交織，呈現出一幅絢麗的都市畫卷，光與影交融，營造出一種獨特的魅力。
+              </p>
+            </div>
+          </div>
+          <div
+            class="beauty_mode"
+            data-aos="fade-right"
+            data-aos-duration="800"
+            data-aos-delay="400"
+          >
+            <button class="beauty_mode-light active">日景</button>
+            <button class="beauty_mode-dark">夜景</button>
+          </div>
+          <p class="source">3D外觀示意圖</p>
+        </div>
+      </div>
+
+      <div class="pic-popup life" id="life">
+        <div class="container">
+          <div class="pic-popup_text">
+            <div class="pic-popup_title">
+              <h2 class="title-ch" data-aos="fade-up" data-aos-duration="1000">
+                全能生活圈
+              </h2>
+              <div class="slider_line"></div>
+            </div>
+            <h3 class="title-en">LIFE FUNCTION</h3>
+          </div>
+          <a
+            class="pic-popup_pic"
+            data-bs-toggle="modal"
+            data-bs-target="#pic-popup-popup"
+          >
+            <div class="pic-popup_main">
+              <img src="./public/img/map-cartoon.webp" alt="" />
+              <div class="pic-popup_mask"></div>
+              <p>點圖看詳細生機圖</p>
+            </div>
+          </a>
+        </div>
+        <img class="decoration life-deco-1" src="./public/img/life-bird.webp" alt="">
+        <img class="decoration life-deco-2 d-lg-block d-none" src="./public/img/life-mountain.webp" alt="">
+        <img class="decoration life-deco-3 d-lg-block d-none" src="./public/img/life-tree.webp" alt="">
+        <img class="decoration life-deco-4 d-lg-none" src="./public/img/life-mountain-m.webp" alt="">
+        <img class="decoration life-deco-5 d-lg-none" src="./public/img/life-tree-m.webp" alt="">
+      </div>
+      <div
+        class="modal fade pic-popup-popup"
+        id="pic-popup-popup"
+        tabindex="-1"
+        aria-labelledby="pic-popup-popupLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="pic-popup-popup_main">
+                <img src="./public/img/map-cartoon.webp" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="arrange">
+        <div class="container">
+            <h3 class="title-en title-blue d-lg-none">
+                PLANE<br>
+                REFERENCE MAP
+            </h3>
+          <div class="arrange_content">
+            <div class="swiper-container arrange_swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="arrange_item">
+                    <img
+                      class="arrange_pic"
+                      src="./public/img/arrange-pic-1.webp"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="arrange_item">
+                    <img
+                      class="arrange_pic"
+                      src="./public/img/arrange-pic-2.webp"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="arrange_item">
+                    <img
+                      class="arrange_pic"
+                      src="./public/img/arrange-pic-3.webp"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="arrange_func">
+              <div class="arrange_arrows">
+                <button id="arrange-prev" class="swiper-arrow">
+                  <svg
+                    id="_圖層_2"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 26.04 46.43"
+                  >
+                    <defs>
+                      <style>
+                        .cls-1 {
+                          fill: #0069a9;
+                        }
+                      </style>
+                    </defs>
+                    <g id="_設計">
+                      <path
+                        class="cls-1"
+                        d="M23.21,46.43c-.72,0-1.45-.28-2-.83L.83,25.21c-1.1-1.1-1.1-2.89,0-4L21.22.83c1.1-1.1,2.89-1.1,4,0,1.1,1.1,1.1,2.89,0,4L6.82,23.21l18.39,18.39c1.1,1.1,1.1,2.89,0,4-.55.55-1.27.83-2,.83Z"
+                      />
+                    </g>
+                  </svg>
+                </button>
+                <button id="arrange-next" class="swiper-arrow">
+                  <svg
+                    id="_圖層_2"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 26.04 46.43"
+                  >
+                    <defs>
+                      <style>
+                        .cls-1 {
+                          fill: #0069a9;
+                        }
+                      </style>
+                    </defs>
+                    <g id="_設計">
+                      <path
+                        class="cls-1"
+                        d="M2.83,46.43c-.72,0-1.45-.28-2-.83-1.1-1.1-1.1-2.89,0-4l18.39-18.39L.83,4.82C-.28,3.72-.28,1.93.83.83,1.93-.28,3.72-.28,4.82.83l20.39,20.39c1.1,1.1,1.1,2.89,0,4L4.82,45.6c-.55.55-1.27.83-2,.83Z"
+                      />
+                    </g>
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="swiper-pagination slider_pagination"
+                id="arrange-pagination"
+              ></div>
+            </div>
+          </div>
+        </div>
+        <img class="decoration arrange-deco-1 d-lg-block d-none" src="./public/img/arrange-tree.webp" alt="">
+        <img class="decoration arrange-deco-2" src="./public/img/arrange-mountain.webp" alt="">
+        <img class="decoration arrange-deco-3 d-lg-none" src="./public/img/arrange-mountain-m.webp" alt="">
+        <img class="decoration arrange-deco-4 d-lg-none" src="./public/img/arrange-people.webp" alt="">
+      </div>
+
+      <div class="contact" id="contact">
+        <img
+          class="deco contact_tree-1"
+          src="./public/img/tree-5.webp"
+          alt=""
+        />
+        <img class="deco contact_bird" src="./public/img/bird-5.webp" alt="" />
+        <img
+          class="deco contact_tree-2"
+          src="./public/img/tree-6.webp"
+          alt=""
+        />
+        <img
+          class="deco contact_mountain-1"
+          src="./public/img/mountain-4.webp"
+          alt=""
+        />
+        <img
+          class="deco contact_mountain-2"
+          src="./public/img/mountain-5.webp"
+          alt=""
+        />
+        <div class="contact_form">
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSfTpDlttWo9hUa0aPG8nLlzto2wdfSPZZX1HYqzb92n6MwTFA/viewform?embedded=true"
+            width="100%"
+            height="940"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+            >正在加载…</iframe
+          >
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="footer_top">
+          <h2 data-aos="fade-right" data-aos-duration="1000">建案資訊</h2>
+          <div class="footer_inform">
+            <div class="d-md-flex align-items-end">
+              <ul class="footer_inform_list">
+                <li
+                  data-aos="fade-right"
+                  data-aos-duration="1000"
+                  data-aos-delay="100"
+                >
+                  <p class="footer_inform_title">房型規劃</p>
+                  <p class="footer_inform_content">2-3 房</p>
                 </li>
-                <li class="kv_info_phone d-lg-block d-none">03-490-1133</li>
-            </ul>
-            <p class="kv_phone d-lg-none">03-490-1133</p>
+                <li
+                  data-aos="fade-right"
+                  data-aos-duration="1000"
+                  data-aos-delay="200"
+                >
+                  <p class="footer_inform_title">坪數規劃</p>
+                  <p class="footer_inform_content">23-33 坪</p>
+                </li>
+                <li
+                  data-aos="fade-right"
+                  data-aos-duration="1000"
+                  data-aos-delay="300"
+                >
+                  <p class="footer_inform_title">預約專線</p>
+                  <p class="footer_inform_content">03-490-1133</p>
+                </li>
+                <li
+                  data-aos="fade-right"
+                  data-aos-duration="1000"
+                  data-aos-delay="400"
+                >
+                  <p class="footer_inform_title">接待會館</p>
+                  <p class="footer_inform_content">
+                    桃園市中壢區民族路五段196號
+                  </p>
+                </li>
+              </ul>
+              <ul class="footer_inform_list">
+                <li
+                  data-aos="fade-right"
+                  data-aos-duration="1000"
+                  data-aos-delay="150"
+                >
+                  <p class="footer_inform_title">建築設計</p>
+                  <p class="footer_inform_content">陳登光 建築師</p>
+                </li>
+                <li
+                  data-aos="fade-right"
+                  data-aos-duration="1000"
+                  data-aos-delay="250"
+                >
+                  <p class="footer_inform_title">建設公司</p>
+                  <p class="footer_inform_content">合京建設股份有限公司</p>
+                </li>
+                <li
+                  data-aos="fade-right"
+                  data-aos-duration="1000"
+                  data-aos-delay="350"
+                >
+                  <p class="footer_inform_title">行銷團隊</p>
+                  <p class="footer_inform_content">旺佳廣告有限公司</p>
+                </li>
+                <li
+                  data-aos="fade-right"
+                  data-aos-duration="1000"
+                  data-aos-delay="450"
+                >
+                  <p class="footer_inform_title">建照號碼</p>
+                  <p class="footer_inform_content">
+                    (113)桃市都建執照字第會楊01355號
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <img
+            class="deco footer_bird d-lg-none"
+            src="./public/img/footer-bird.webp"
+            alt=""
+          />
+          <img
+            class="deco footer_tree d-lg-none"
+            src="./public/img/footer-tree.webp"
+            alt=""
+          />
         </div>
-
-        <div class="map" id="map">
-            <img class="deco map_bird d-lg-block d-none" src="./public/img/bird-1.webp" alt="">
-            <div class="map_inner">
-                <div class="map_text">
-                    <h3 class="title title-en title-white" data-aos="fade-up" data-aos-duration="800">UNLIMITED FUTURE</h3>
-                    <h2 class="title title-ch title-white" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100"><span class="highlight">過嶺</span>10分鐘生活圈</h2>
-                    <p class="text text-white" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-                        <span class="d-flex align-items-center justify-content-center">
-                            <span>3分鐘上</span>
-                            <img class="map_symbol" src="./public/img/66.webp" alt="">
-                            <span>快速道路，中壢好市多10分鐘，</span>
-                        </span>
-                        <span>科技菁英首選宜居之境，擁抱潛利無限新未來。</span>
-                    </p>
-                </div>
-                <img class="map_main" src="./public/img/map.webp" alt="">
-                <p class="source">空拍圖</p>
-                <img class="map_hint d-md-none" src="./public/img/scroll.webp" alt="">
-            </div>
+        <div class="footer_bottom">
+          <p>
+            Design By
+            <a href="https://zhuliads.com/" target="_blank"
+              >Zhuli 築里整合行銷</a
+            >
+          </p>
         </div>
-
-        <div class="tech" id="tech">
-            <img class="tech_bg w-100 d-lg-block d-none" src="./public/img/tech-bg.webp" alt="">
-            <img class="tech_bg w-100 d-lg-none" src="./public/img/tech-bg-m.webp" alt="">
-            <div class="tech_text">
-                <h3 class="title title-en title-white"><span data-aos="fade-right" data-aos-duration="800">TECH CAPITAL</span></h3>
-                <h2 class="title title-ch title-white" data-aos="fade-right" data-aos-duration="800" data-aos-delay="100">科技密境 <br class="d-lg-none">西部產業走廊樞紐</h2>
-                <p class="text text-white"data-aos="fade-right" data-aos-duration="800" data-aos-delay="200">
-                    鄰近幼獅工業區、高榮工業區，串聯桃園與新竹產業聚落，<br class="d-lg-block d-none">
-                    快速連結國道，佔通勤往來之便，掌握未來發展先機。
-                </p>
-            </div>
-            <p class="source">情境示意圖</p>
-            <img class="deco tech_bird" src="./public/img/bird-3.webp" alt="" data-aos="fade-down-right" data-aos-duration="800">
-        </div>
-
-        <div class="slider text-pic transport" id="transport">
-            <img class="deco transport_tree-2 d-lg-block d-none" src="./public/img/tree-1.webp" alt="">
-            <div class="container d-flex">
-                <div class="slider_pic" data-aos="fade-up" data-aos-duration="800">
-                    <div class="swiper-container transport_swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="slider_item">
-                                    <img src="./public/img/transport-1.webp" alt="">
-                                    <p>66快速道路實景圖</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="slider_item">
-                                    <img src="./public/img/transport-2.webp" alt="">
-                                    <p>桃園高鐵站實景圖</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="slider_item">
-                                    <img src="./public/img/transport-3.webp" alt="">
-                                    <p>埔心火車站實景圖</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slider_arrow swiper-button-next"><img src="./public/img/arrow-right.webp" alt=""></div>
-                        <div class="slider_arrow swiper-button-prev"><img src="./public/img/arrow-left.webp" alt=""></div>
-                    </div>
-                    <div class="slider_pagination" id="transport-pagination"></div>
-                </div>
-                <div class="slider_text">
-                    <h3 class="title title-en title-blue" data-aos="fade-right" data-aos-duration="800">GOOD TRANSPORT</h3>
-                    <h2 class="title title-ch title-blue" data-aos="fade-right" data-aos-duration="800" data-delay="100">通勤捷境<br>交通路網四通八達</h2>
-                    <div class="slider_line"></div>
-                    <p class="text text-black" data-aos="fade-right" data-aos-duration="800" data-delay="200">
-                        3分鐘抵達66快速道路，瞬接國道1號滿足縱向、橫向路網需求，台鐵、高鐵雙軌加持，15分鐘抵青埔高鐵、30分鐘達桃園機場。
-                    </p>
-                    <img class="deco transport_tree-1" src="./public/img/tree-1.webp" alt="">
-                </div>
-            </div>
-        </div>
-
-        <div class="slider pic-text chill">
-            <img class="deco chill_tree d-lg-block d-none" src="./public/img/tree-3.webp" alt="">
-            <div class="container d-flex">
-                <div class="slider_pic" data-aos="fade-up" data-aos-duration="800">
-                    <div class="swiper-container chill_swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="slider_item">
-                                    <img src="./public/img/chill-4.webp" alt="">
-                                    <p>實景圖</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="slider_item">
-                                    <img src="./public/img/chill-5.webp" alt="">
-                                    <p>實景圖</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="slider_item">
-                                    <img src="./public/img/chill-6.webp" alt="">
-                                    <p>實景圖</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slider_arrow swiper-button-next" id="chill-next"><img src="./public/img/arrow-right.webp" alt=""></div>
-                        <div class="slider_arrow swiper-button-prev" id="chill-prev"><img src="./public/img/arrow-left.webp" alt=""></div>
-                    </div>
-                    <div class="slider_pagination" id="chill-pagination"></div>
-                </div>
-                <div class="slider_text">
-                    <h3 class="title title-en title-blue" data-aos="fade-left" data-aos-duration="800">CHILL LIFESTYLE</h3>
-                    <h2 class="title title-ch title-blue" data-aos="fade-left" data-aos-duration="800" data-delay="100">生活謐境<br>同時坐擁繁華與寧靜</h2>
-                    <div class="slider_line"></div>
-                    <p class="text text-black" data-aos="fade-left" data-aos-duration="800" data-delay="200">
-                        鄰近熱鬧的過嶺商圈，到COSTCO僅約10分鐘；享受工作效率與生活品質的完美平衡，滿足日常所有需求。
-                    </p>
-                    <div class="swiper-container intro chill_textSwiper" data-aos="fade-up" data-aos-duration="800" data-delay="300">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="intro_title chill_textSwiper_title">
-                                    <h4>商圈</h4>
-                                    <ul>
-                                        <li>食衣住行</li>
-                                        <li class="intro_line chill_textSwiper_line"><img src="./public/img/chill-line.webp" alt=""></li>
-                                        <li>機能之境</li>
-                                    </ul>
-                                </div>
-                                <p class="intro_text chill_textSwiper_text">
-                                    坐享中壢過嶺民族路商圈＋楊梅市心的雙城機能，全聯、寶雅、億客城、各大超商、85度c、必勝客等連鎖品牌俱全，日常採買、食衣所需，均可一次滿足。
-                                </p>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="intro_title chill_textSwiper_title">
-                                    <h4>商圈</h4>
-                                    <ul>
-                                        <li>食衣住行</li>
-                                        <li class="intro_line chill_textSwiper_line"><img src="./public/img/chill-line.webp" alt=""></li>
-                                        <li>機能之境</li>
-                                    </ul>
-                                </div>
-                                <p class="intro_text chill_textSwiper_text">
-                                    坐享中壢過嶺民族路商圈＋楊梅市心的雙城機能，全聯、寶雅、億客城、各大超商、85度c、必勝客等連鎖品牌俱全，日常採買、食衣所需，均可一次滿足。
-                                </p>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="intro_title chill_textSwiper_title">
-                                    <h4>校園</h4>
-                                    <ul>
-                                        <li>書香沁人</li>
-                                        <li class="intro_line chill_textSwiper_line"><img src="./public/img/chill-line.webp" alt=""></li>
-                                        <li>勤學之境</li>
-                                    </ul>
-                                </div>
-                                <p class="intro_text chill_textSwiper_text">
-                                    距高榮國小僅800m，車行6分鐘可到仁美國中，是家有學齡兒父母的首選，鄰近校園方便日後接送上下學，環境相對單純安靜，更適合孩子學習成長。
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="beauty light" id="beauty">
-            <img class="deco beauty_mountain" src="./public/img/mountain-3.webp" alt="">
-            <img class="deco beauty_bird d-lg-block d-none" src="./public/img/bird-4.webp" alt="">
-            <img class="deco beauty_tree d-lg-none" src="./public/img/beauty-tree.webp" alt="">
-            <div class="container">
-                <div class="beauty_title">
-                    <h3 class="title title-en title-white" data-aos="fade-right" data-aos-duration="800">BUILDING BEAUTY</h3>
-                    <h2 class="title title-ch title-white" data-aos="fade-right" data-aos-duration="800" data-aos-delay="100">美學覓境<br>對稱建築簡約美學</h2>
-                    <div class="slider_line"></div>
-                </div>
-                <p class="text text-white" data-aos="fade-right" data-aos-duration="800" data-aos-delay="200">
-                    建築如詩，我們擲筆只為在土地上，描繪人與自然的共鳴。簡潔的線條、對稱的結構，在光影交替間訴說這片土地的故事。
-                </p>
-                <div class="beauty_intro" data-aos="fade-right" data-aos-duration="800" data-aos-delay="300">
-                    <div class="intro light active">
-                        <div class="intro_title">
-                            <h4>日景</h4>
-                            <ul>
-                                <li>純粹之域</li>
-                                <li class="intro_line chill_textSwiper_line"><img src="./public/img/beauty-line.webp" alt=""></li>
-                                <li>簡約之美</li>
-                            </ul>
-                        </div>
-                        <p class="intro_text chill_textSwiper_text">
-                            建築如同一幅純淨的畫卷，映照出清晨的第一縷日光。以白色線條勾畫出優雅的對稱結構，簡約與深度兼融，呈現純粹的有序之美。 
-                        </p>
-                    </div>
-                    <div class="intro dark">
-                        <div class="intro_title">
-                            <h4>夜景</h4>
-                            <ul>
-                                <li>璀璨如星</li>
-                                <li class="intro_line chill_textSwiper_line"><img src="./public/img/beauty-line.webp" alt=""></li>
-                                <li>閃耀城市</li>
-                            </ul>
-                        </div>
-                        <p class="intro_text chill_textSwiper_text">
-                            當夜幕降臨、華燈初上熠熠生輝，與深邃的夜空和閃爍的城市燈海交織，呈現出一幅絢麗的都市畫卷，光與影交融，營造出一種獨特的魅力。
-                        </p>
-                    </div>
-                </div>
-                <div class="beauty_mode" data-aos="fade-right" data-aos-duration="800" data-aos-delay="400">
-                    <button class="beauty_mode-light active">日景</button>
-                    <button class="beauty_mode-dark">夜景</button>
-                </div>
-                <p class="source">3D外觀示意圖</p>
-            </div>
-        </div>
-
-        <div class="contact" id="contact">
-            <img class="deco contact_tree-1" src="./public/img/tree-5.webp" alt="">
-            <img class="deco contact_bird" src="./public/img/bird-5.webp" alt="">
-            <img class="deco contact_tree-2" src="./public/img/tree-6.webp" alt="">
-            <img class="deco contact_mountain-1" src="./public/img/mountain-4.webp" alt="">
-            <img class="deco contact_mountain-2" src="./public/img/mountain-5.webp" alt="">
-            <div class="contact_form">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfTpDlttWo9hUa0aPG8nLlzto2wdfSPZZX1HYqzb92n6MwTFA/viewform?embedded=true" width="100%" height="940" frameborder="0" marginheight="0" marginwidth="0">正在加载…</iframe>
-            </div>
-        </div>
-
-        <footer class="footer">
-            <div class="footer_top">
-                <h2 data-aos="fade-right" data-aos-duration="1000">建案資訊</h2>
-                <div class="footer_inform">
-                    <div class="d-md-flex align-items-end">
-                        <ul class="footer_inform_list">
-                            <li data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
-                                <p class="footer_inform_title">房型規劃</p>
-                                <p class="footer_inform_content">2-3 房</p>
-                            </li>
-                            <li data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
-                                <p class="footer_inform_title">坪數規劃</p>
-                                <p class="footer_inform_content">23-33 坪</p>
-                            </li>
-                            <li data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
-                                <p class="footer_inform_title">預約專線</p>
-                                <p class="footer_inform_content">03-490-1133</p>
-                            </li>
-                            <li data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
-                                <p class="footer_inform_title">接待會館</p>
-                                <p class="footer_inform_content">桃園市中壢區民族路五段196號</p>
-                            </li>
-                        </ul>
-                        <ul class="footer_inform_list">
-                            <li data-aos="fade-right" data-aos-duration="1000" data-aos-delay="150">
-                                <p class="footer_inform_title">建築設計</p>
-                                <p class="footer_inform_content">陳登光 建築師</p>
-                            </li>
-                            <li data-aos="fade-right" data-aos-duration="1000" data-aos-delay="250">
-                                <p class="footer_inform_title">建設公司</p>
-                                <p class="footer_inform_content">合京建設股份有限公司</p>
-                            </li>
-                            <li data-aos="fade-right" data-aos-duration="1000" data-aos-delay="350">
-                                <p class="footer_inform_title">行銷團隊</p>
-                                <p class="footer_inform_content">旺佳廣告有限公司</p>
-                            </li>
-                            <li data-aos="fade-right" data-aos-duration="1000" data-aos-delay="450">
-                                <p class="footer_inform_title">建照號碼</p>
-                                <p class="footer_inform_content">(113)桃市都建執照字第會楊01355號</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <img class="deco footer_bird d-lg-none" src="./public/img/footer-bird.webp" alt="">
-                <img class="deco footer_tree d-lg-none" src="./public/img/footer-tree.webp" alt="">
-            </div>
-            <div class="footer_bottom">
-                <p>Design By <a href="https://zhuliads.com/" target="_blank">Zhuli 築里整合行銷</a></p>
-            </div>
-        </footer>
+      </footer>
     </main>
 
-
     <div class="sideBtn d-xl-block d-flex">
-        <ul class="d-xl-block d-flex sideBtn_link">
-            <li>
-                <a href="https://www.facebook.com/profile.php?id=61571870015785" target="_blank">
-                    <img src="./public/img/fb.webp" alt="">
-                </a>
-            </li>
-            <li>
-                <a href="https://maps.app.goo.gl/pVbzyFAYg47f9HxK8" target="_blank">
-                    <img src="./public/img/address.webp" alt="">
-                </a>
-            </li>
-            <li class="d-lg-block d-none">
-                <a href="https://maps.app.goo.gl/b1FPXRgEHyv9im9i9" target="_blank">
-                    <img src="./public/img/home.webp" alt="">
-                </a>
-            </li>
-            <li>
-                <a href="tel:03 426 1855" target="_blank">
-                    <img src="./public/img/phone.webp" alt="">
-                </a>
-            </li>
-        </ul>
-        <ul class="d-xl-block d-flex sideBtn_top">
-            <li>
-                <a class="btn-top">
-                    <img src="./public/img/top.webp" alt="">
-                </a>
-            </li>
-        </ul>
+      <ul class="d-xl-block d-flex sideBtn_link">
+        <li>
+          <a
+            href="https://www.facebook.com/profile.php?id=61571870015785"
+            target="_blank"
+          >
+            <img src="./public/img/fb.webp" alt="" />
+          </a>
+        </li>
+        <li>
+          <a href="https://maps.app.goo.gl/pVbzyFAYg47f9HxK8" target="_blank">
+            <img src="./public/img/address.webp" alt="" />
+          </a>
+        </li>
+        <li class="d-lg-block d-none">
+          <a href="https://maps.app.goo.gl/b1FPXRgEHyv9im9i9" target="_blank">
+            <img src="./public/img/home.webp" alt="" />
+          </a>
+        </li>
+        <li>
+          <a href="tel:03 426 1855" target="_blank">
+            <img src="./public/img/phone.webp" alt="" />
+          </a>
+        </li>
+      </ul>
+      <ul class="d-xl-block d-flex sideBtn_top">
+        <li>
+          <a class="btn-top">
+            <img src="./public/img/top.webp" alt="" />
+          </a>
+        </li>
+      </ul>
     </div>
-    
+
     <script src="./public/js/jquery/jquery.min.js"></script>
     <script src="./public/js/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="./public/js/aos/aos.js"></script>
     <script src="./public/js/swiper/swiper-bundle.min.js"></script>
     <script src="./public/js/index.js"></script>
-</body>
+  </body>
 </html>
