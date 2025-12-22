@@ -454,6 +454,7 @@ main {
   }
   &_main {
     width: 100%;
+    max-width: inherit !important;
   }
   &_hint {
     position: absolute;
